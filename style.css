@@ -42,7 +42,7 @@ body {
 }
 
 .text-info {
-    margin-bottom: 8rem;
+    margin-bottom: 9rem;
 }
 
 .text-info-links {
@@ -74,7 +74,7 @@ body {
     margin-left: 5px;
 }
 
-.text-socials a {                   
+.text-socials a {
     width: 40px;
     height: 40px;
     display: flex;
@@ -82,7 +82,7 @@ body {
     align-items: center;
 }
 
-.text-socials img {                   
+.text-socials img {
     padding: 0.5rem;
 }
 
@@ -160,11 +160,20 @@ label {
     border-style: none;
     border-bottom: 2px solid #2E02494D;
     background-color: transparent;
+    caret-color: #A91079;
 }
 
 .form-info input:hover {
     color: #2E0249;
     border-bottom: 2px solid #A91079;
+}
+
+.form-info input::placeholder {
+    color:#2E02494D;
+}
+
+.form-info input:focus {
+    outline: none;
 }
 
 .form-checkbox-container {
