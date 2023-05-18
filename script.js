@@ -8,36 +8,36 @@ form.addEventListener('submit', (event) => {
 
     // verificar se um dos botões está selecionado
 
-
-    // verificar se o input nome tem pelo menos dois valores
-    if (username.value === '') {
+    if (username.value === '' || !isUsernameValid(username.value)) {
         // colocar a classe error no input
+        console.log("erro no nome!");
         return
-    }
+    } 
 
-    // verificar se o email está na forma correta
     if (email.value === '' || !isEmailValid(email.value)) {
         // colocar a classe error no input
+        console.log("erro no email!");
         return
     }
 
-    // a mensagem precisa ter no mínimo 20 letras
-    if (username.value === '' || message.length > 20) {
+    if (username.value === '' || !message.length > 20) {
         // colocar a classe error no input
+        console.log("erro na mensagems!")
         return
     }
 
     form.onsubmit();
 })
 
+function isUsernameValid(username) {
+    const words = username.split(" ");
+    return words.length >= 2;
+  }
+
 function isEmailValid(email) {
     const emailRegex = new RegExp(
-        '/^[a-zA-Z0-9._-]+@[a-zA-Z0-9._-]+\.[a-zA-Z]{2,}$/'
+        /^[a-zA-Z0-9._-]+@[a-zA-Z0-9._-]+\.[a-zA-Z]{2,}$/
     )
 
-    if(emailRegex.test(email)) {
-        return true
-    }
-
-    return false
+    return emailRegex.test(email);
 }
