@@ -181,6 +181,21 @@ label {
 #form .error {
     font-size: 0.7rem;
     color: #a70d0d;
+}
+
+#form .checkbox-error {
+    display: none;
+}
+
+#form .name-error {
+    display: none;
+}
+
+#form .email-error {
+    display: none;
+}
+
+#form .message-error {
     display: none;
 }
 
