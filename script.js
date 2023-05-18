@@ -1,35 +1,51 @@
-const form = document.getElementById('form')
-const checkboxes = document.querySelectorAll('input[type=checkbox]')
-const username = document.getElementById('username')
-const email = document.getElementById('email')
-const message = document.getElementById('message')
+const form = document.getElementById('form');
+const checkboxes = document.querySelectorAll('input[type=checkbox]');
+const username = document.getElementById('username');
+const email = document.getElementById('email');
+const message = document.getElementById('message');
+
+const checkboxError = document.getElementById('checkbox-error-msg');
+const checkboxUsernameError = document.getElementById('checkbox-error-name');
+const checkboxEmailError = document.getElementById('checkbox-error-email');
+const checkboxMessageError = document.getElementById('checkbox-error-message');
+
+// const errors = {
+//     checkboxes: false,
+//     username: false,
+//     email: false,
+//     message: false
+// }
 
 form.addEventListener('submit', (event) => {
     event.preventDefault()
 
     if (!areCheckboxesSelected(checkboxes)) {
-        // colocar a classe error no input
-        checkbox.classList.remove('checkbox-error');
+        checkboxError.classList.remove('checkbox-error');
         return
     }
 
+    checkboxError.classList.add('checkbox-error');
+
     if (username.value === '' || !isUsernameValid(username.value)) {
-        // colocar a classe error no input
-        username.classList.remove('username-error');
+        checkboxUsernameError.classList.remove('name-error');
         return
     } 
 
+    checkboxUsernameError.classList.add('name-error');
+
     if (email.value === '' || !isEmailValid(email.value)) {
-        // colocar a classe error no input
-        console.log("erro no email!");
+        checkboxEmailError.classList.remove('email-error');
         return
     }
 
+    checkboxEmailError.classList.add('email-error');
+
     if (username.value === '' || !message.length > 20) {
-        // colocar a classe error no input
-        console.log("erro na mensagems!")
+        checkboxMessageError.classList.remove('message-error');
         return
     }
+
+    checkboxMessageError.classList.add('message-error');
 
     form.onsubmit();
 })
