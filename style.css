@@ -117,24 +117,33 @@ body {
     margin-bottom: 40px;
 }
 
-.form-buttons input {
+.checkbox {
+    display: none;
+}
+
+label {
     font-family: 'Poppins', sans-serif;
     color: #2E02494D;
     font-size: 0.75rem;
     padding: 10px 13px;
     height: 40px;
-
     border: 2px solid #2E02494D;
     border-radius: 8px;
     align-items: center;
     justify-content: center;
-}
+  }
 
-.form-buttons input:hover {
+  .checkbox:checked + label {
     color: #EEEEEE;
     background-color: #A91079;
     border: 2px solid #A91079;
-}
+  }
+
+  .checkbox:hover + label {
+    color: #EEEEEE;
+    background-color: #A91079;
+    border: 2px solid #A91079;
+  }
 
 .form-info {
     display: flex;
