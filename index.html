@@ -39,22 +39,34 @@
                 <div class="form-container">
                     <h2>I'm interested in...</h2>
                     <form id="form">
-                       <div class="form-buttons">
-                           <input type="checkbox" id="checkbox1" class="checkbox">
-                           <label for="checkbox1">UI/UX design</label>
-                           <input type="checkbox" id="checkbox2" class="checkbox">
-                           <label for="checkbox2">Web design</label>
-                           <input type="checkbox" id="checkbox3" class="checkbox">
-                           <label for="checkbox3">Graphic design</label>
-                           <input type="checkbox" id="checkbox4" class="checkbox">
-                           <label for="checkbox4">Design system</label>
-                           <input type="checkbox" id="checkbox5" class="checkbox">
-                           <label for="checkbox5">Other</label>
+                       <div class="form-checkbox-container">
+                           <div class="form-checkbox">
+                               <input type="checkbox" id="checkbox1" class="checkbox">
+                               <label for="checkbox1">UI/UX design</label>
+                               <input type="checkbox" id="checkbox2" class="checkbox">
+                               <label for="checkbox2">Web design</label>
+                               <input type="checkbox" id="checkbox3" class="checkbox">
+                               <label for="checkbox3">Graphic design</label>
+                               <input type="checkbox" id="checkbox4" class="checkbox">
+                               <label for="checkbox4">Design system</label>
+                               <input type="checkbox" id="checkbox5" class="checkbox">
+                               <label for="checkbox5">Other</label>
+                           </div>
+                           <p class="error checkbox-error">Please select an interest.</p>
                        </div>
                        <div class="form-info">
-                        <input type="text" name="name" id="username" placeholder="Your name">
-                        <input type="email" name="email" id="email" placeholder="Your email">
-                        <input type="text" name="Your message" id="message" placeholder="Your message">
+                        <div class="form-info-container">
+                            <input type="text" name="name" id="username" placeholder="Your name">
+                            <p class="error name-error">Please enter your name and last name.</p>
+                        </div>
+                        <div class="form-info-container">
+                            <input type="email" name="email" id="email" placeholder="Your email">
+                            <p class="error email-error">Please enter a valid email address.</p>
+                        </div>
+                        <div class="form-info-container">
+                            <input type="text" name="Your message" id="message" placeholder="Your message">
+                            <p class="error message-error">Your message needs to be at least 20 characters long.</p>
+                        </div>
                        </div>
                        <button type="submit">
                         <img src="images/submit-icon.svg" alt="submit icon">

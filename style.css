@@ -99,6 +99,7 @@ body {
 
 .form-container {
     padding: 1.6rem;
+    height: 520px;
 }
 
 .form-container h2 {
@@ -109,12 +110,12 @@ body {
     margin-bottom: 10px;
 }
 
-.form-buttons {
+.form-checkbox {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     gap: 10px;
-    margin-bottom: 40px;
+    margin-bottom: 8px;
 }
 
 .checkbox {
@@ -148,8 +149,8 @@ label {
 .form-info {
     display: flex;
     flex-direction: column;
-    gap: 30px;
-    margin-bottom: 124px;
+    gap: 10px;
+    margin-bottom: 85px;
 }
 
 .form-info input {
@@ -164,7 +165,23 @@ label {
 .form-info input:hover {
     color: #2E0249;
     border-bottom: 2px solid #A91079;
+}
 
+.form-checkbox-container {
+    height: 150px;
+}
+
+.form-info-container {
+    height: 48px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+#form .error {
+    font-size: 0.7rem;
+    color: #a70d0d;
+    display: none;
 }
 
 #form button {
@@ -177,4 +194,9 @@ label {
     display: flex;
     gap: 10px;
     padding: 10px 25px;
+}
+
+#form button:hover {
+    background: #8a0a61;
+    border: 2px solid #8a0a61;
 }
