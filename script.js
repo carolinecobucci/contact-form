@@ -3,12 +3,19 @@ const checkboxes = document.querySelectorAll("input[type=checkbox]");
 const username = document.getElementById("username");
 const email = document.getElementById("email");
 const message = document.getElementById("message");
-const submit = document.querySelectorAll("input[type=submit]");
+const submitButton = document.getElementById("submitButton");
 
 const checkboxError = document.getElementById("checkbox-error-msg");
-const checkboxUsernameError = document.getElementById("checkbox-error-name");
-const checkboxEmailError = document.getElementById("checkbox-error-email");
-const checkboxMessageError = document.getElementById("checkbox-error-message");
+const usernameError = document.getElementById("error-name");
+const emailError = document.getElementById("error-email");
+const messageError = document.getElementById("error-message");
+
+const errors = {
+  "checkbox-error": false,
+  "name-error": false,
+  "email-error": false,
+  "message-error": false,
+};
 
 function areCheckboxesSelected(checkboxes) {
   const checkedCheckboxes = [];
@@ -32,12 +39,20 @@ function isEmailValid(email) {
   return emailRegex.test(email);
 }
 
-const errors = {
-  "checkbox-error": false,
-  "name-error": false,
-  "email-error": false,
-  "message-error": false,
-};
+form.addEventListener("input", function () {
+  let allFieldsFilled = true;
+
+  for (let i = 0; i < form.elements.length; i++) {
+    const field = form.elements[i];
+
+    if (field.type !== "submit" && (field.value === "" || !areCheckboxesSelected(checkboxes))) {
+      allFieldsFilled = false;
+      break;
+    }
+  }
+
+  submitButton.disabled = !allFieldsFilled;
+});
 
 form.addEventListener("submit", (event) => {
   event.preventDefault();
@@ -54,19 +69,19 @@ form.addEventListener("submit", (event) => {
     errors["email-error"] = true;
   } else errors["email-error"] = false;
 
-  if (message.value === "" || !message.length > 20) {
+  if (message.value === "" || message.value.length < 20) {
     errors["message-error"] = true;
   } else errors["message-error"] = false;
 
   if (errors["checkbox-error"]) checkboxError.classList.remove("checkbox-error");
-  if (errors["name-error"]) checkboxUsernameError.classList.remove("name-error");
-  if (errors["email-error"]) checkboxEmailError.classList.remove("email-error");
-  if (errors["message-error"]) checkboxMessageError.classList.remove("message-error");
+  if (errors["name-error"]) usernameError.classList.remove("name-error");
+  if (errors["email-error"]) emailError.classList.remove("email-error");
+  if (errors["message-error"]) messageError.classList.remove("message-error");
 
   if (!errors["checkbox-error"]) checkboxError.classList.add("checkbox-error");
-  if (!errors["name-error"]) checkboxUsernameError.classList.add("name-error");
-  if (!errors["email-error"]) checkboxEmailError.classList.add("email-error");
-  if (!errors["message-error"]) checkboxMessageError.classList.add("message-error");
+  if (!errors["name-error"]) usernameError.classList.add("name-error");
+  if (!errors["email-error"]) emailError.classList.add("email-error");
+  if (!errors["message-error"]) messageError.classList.add("message-error");
 
   const booleanArray = Object.values(errors);
   const errorArray = booleanArray.filter((booleanValue) => booleanValue);

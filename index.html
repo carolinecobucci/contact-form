@@ -44,7 +44,7 @@
         <div class="form-container-background">
           <div class="form-container">
             <h2>I'm interested in...</h2>
-            <form id="form">
+            <form id="form" novalidate>
               <div class="form-checkbox-container">
                 <div class="form-checkbox">
                   <input
@@ -95,24 +95,24 @@
               <div class="form-info">
                 <div class="form-info-container">
                   <input type="text" name="name" id="username" placeholder="Your name" />
-                  <p id="checkbox-error-name" class="error name-error">
+                  <p id="error-name" class="error name-error">
                     Please enter your name and last name.
                   </p>
                 </div>
                 <div class="form-info-container">
                   <input type="email" name="email" id="email" placeholder="Your email" />
-                  <p id="checkbox-error-email" class="error email-error">
+                  <p id="error-email" class="error email-error">
                     Please enter a valid email address.
                   </p>
                 </div>
                 <div class="form-info-container">
                   <input type="text" name="message" id="message" placeholder="Your message" />
-                  <p id="checkbox-error-message" class="error message-error">
+                  <p id="error-message" class="error message-error">
                     Your message needs to be at least 20 characters long.
                   </p>
                 </div>
               </div>
-              <button type="submit">
+              <button id="submitButton" type="submit" disabled>
                 <img src="images/submit-icon.svg" alt="submit icon" />
                 <p>Send Message</p>
               </button>
