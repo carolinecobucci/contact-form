@@ -10,6 +10,28 @@ const checkboxUsernameError = document.getElementById("checkbox-error-name");
 const checkboxEmailError = document.getElementById("checkbox-error-email");
 const checkboxMessageError = document.getElementById("checkbox-error-message");
 
+function areCheckboxesSelected(checkboxes) {
+  const checkedCheckboxes = [];
+
+  for (let i = 0; i < checkboxes.length; i++) {
+    if (checkboxes[i].checked) {
+      checkedCheckboxes.push(checkboxes[i]);
+    }
+  }
+
+  return checkedCheckboxes.length > 0;
+}
+
+function isUsernameValid(username) {
+  const words = username.split(" ");
+  return words.length >= 2;
+}
+
+function isEmailValid(email) {
+  const emailRegex = new RegExp(/^[a-zA-Z0-9._-]+@[a-zA-Z0-9._-]+\.[a-zA-Z]{2,}$/);
+  return emailRegex.test(email);
+}
+
 const errors = {
   "checkbox-error": false,
   "name-error": false,
@@ -36,19 +58,15 @@ form.addEventListener("submit", (event) => {
     errors["message-error"] = true;
   } else errors["message-error"] = false;
 
-  if (errors["checkbox-error"])
-    checkboxError.classList.remove("checkbox-error");
-  if (errors["name-error"])
-    checkboxUsernameError.classList.remove("name-error");
+  if (errors["checkbox-error"]) checkboxError.classList.remove("checkbox-error");
+  if (errors["name-error"]) checkboxUsernameError.classList.remove("name-error");
   if (errors["email-error"]) checkboxEmailError.classList.remove("email-error");
-  if (errors["message-error"])
-    checkboxMessageError.classList.remove("message-error");
+  if (errors["message-error"]) checkboxMessageError.classList.remove("message-error");
 
   if (!errors["checkbox-error"]) checkboxError.classList.add("checkbox-error");
   if (!errors["name-error"]) checkboxUsernameError.classList.add("name-error");
   if (!errors["email-error"]) checkboxEmailError.classList.add("email-error");
-  if (!errors["message-error"])
-    checkboxMessageError.classList.add("message-error");
+  if (!errors["message-error"]) checkboxMessageError.classList.add("message-error");
 
   const booleanArray = Object.values(errors);
   const errorArray = booleanArray.filter((booleanValue) => booleanValue);
@@ -59,27 +77,3 @@ form.addEventListener("submit", (event) => {
 
   form.onsubmit();
 });
-
-function areCheckboxesSelected(checkboxes) {
-  const checkedCheckboxes = [];
-
-  for (let i = 0; i < checkboxes.length; i++) {
-    if (checkboxes[i].checked) {
-      checkedCheckboxes.push(checkboxes[i]);
-    }
-  }
-
-  return checkedCheckboxes.length > 0;
-}
-
-function isUsernameValid(username) {
-  const words = username.split(" ");
-  return words.length >= 2;
-}
-
-function isEmailValid(email) {
-  const emailRegex = new RegExp(
-    /^[a-zA-Z0-9._-]+@[a-zA-Z0-9._-]+\.[a-zA-Z]{2,}$/
-  );
-  return emailRegex.test(email);
-}
