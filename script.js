@@ -3,6 +3,7 @@ const checkboxes = document.querySelectorAll('input[type=checkbox]');
 const username = document.getElementById('username');
 const email = document.getElementById('email');
 const message = document.getElementById('message');
+const submit = document.querySelectorAll('input[type=submit]');
 
 const checkboxError = document.getElementById('checkbox-error-msg');
 const checkboxUsernameError = document.getElementById('checkbox-error-name');
@@ -40,7 +41,7 @@ form.addEventListener('submit', (event) => {
 
     checkboxEmailError.classList.add('email-error');
 
-    if (username.value === '' || !message.length > 20) {
+    if (message.value === '' || !message.length > 20) {
         checkboxMessageError.classList.remove('message-error');
         return
     }

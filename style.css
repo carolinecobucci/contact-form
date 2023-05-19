@@ -19,7 +19,7 @@ body {
 
 .container {
     background-color: #2E0249;
-    border-radius: 14px;
+    border-radius: 0.875rem;
     margin: 0 auto;
     width: 800px;
 }
@@ -27,7 +27,7 @@ body {
 .container-wrap {
     padding: 2rem;
     display: flex;
-    gap: 80px;
+    gap: 5rem;
 }
 
 .text-container h1 {
@@ -48,30 +48,30 @@ body {
 .text-info-links {
     color: #FFFFFF;
     display: flex;
-    gap: 10px;
+    gap: 0.625rem;
     padding: 1rem 3rem 1rem 1rem;
     font-size: .8rem;
     font-weight: 500;
-    border: 2px solid #2E0249;
-    border-radius: 12px;
+    border: 0.125rem solid #2E0249;
+    border-radius: 0.75rem;
 }
 
 .text-info-links img {
-    width: 15px;
+    width: 0.9rem;
 }
 
 .text-info-links:hover {
     background: rgba(87, 10, 87, 0.5);
-    border: 2px solid #A91079;
-    border-radius: 12px;
+    border: 0.125rem solid #A91079;
+    border-radius: 0.75rem;
 }
 
 .text-socials {
     display: flex;
-    width: 180px;
+    width: 11.25rem;
     align-items: center;
     justify-content: space-around;
-    margin-left: 5px;
+    margin-left: 0.75rem;
 }
 
 .text-socials a {
@@ -93,13 +93,13 @@ body {
 
 .form-container-background {
     background-color: #EEEEEE;
-    border-radius: 14px;
+    border-radius: 0.875rem;
     width: 100%;
 }
 
 .form-container {
     padding: 1.6rem;
-    height: 520px;
+    height: 2rem;
 }
 
 .form-container h2 {
@@ -107,15 +107,15 @@ body {
     color: #2E0249;
     font-size: 0.75rem;
     font-weight: 500;
-    margin-bottom: 10px;
+    margin-bottom: 0.625rem;
 }
 
 .form-checkbox {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    gap: 10px;
-    margin-bottom: 8px;
+    gap: 0.625rem;
+    margin-bottom: 0.5rem;
 }
 
 .checkbox {
@@ -126,10 +126,10 @@ label {
     font-family: 'Poppins', sans-serif;
     color: #2E02494D;
     font-size: 0.75rem;
-    padding: 10px 13px;
-    height: 40px;
-    border: 2px solid #2E02494D;
-    border-radius: 8px;
+    padding: 0.625rem 0.8125rem;
+    height: 2.5rem;
+    border: 0.125rem solid #2E02494D;
+    border-radius: 0.5rem;
     align-items: center;
     justify-content: center;
   }
@@ -137,20 +137,20 @@ label {
   .checkbox:checked + label {
     color: #EEEEEE;
     background-color: #A91079;
-    border: 2px solid #A91079;
+    border: 0.125rem solid #A91079;
   }
 
   .checkbox:hover + label {
     color: #EEEEEE;
     background-color: #A91079;
-    border: 2px solid #A91079;
+    border: 0.125rem solid #A91079;
   }
 
 .form-info {
     display: flex;
     flex-direction: column;
-    gap: 10px;
-    margin-bottom: 85px;
+    gap: 0.625rem;
+    margin-bottom: 5.3125rem;
 }
 
 .form-info input {
@@ -158,14 +158,14 @@ label {
     font-size: 0.75rem;
     color: #2E02494D;
     border-style: none;
-    border-bottom: 2px solid #2E02494D;
+    border-bottom: 0.125rem solid #2E02494D;
     background-color: transparent;
     caret-color: #A91079;
 }
 
 .form-info input:hover {
     color: #2E0249;
-    border-bottom: 2px solid #A91079;
+    border-bottom: 0.125rem solid #A91079;
 }
 
 .form-info input::placeholder {
@@ -177,14 +177,14 @@ label {
 }
 
 .form-checkbox-container {
-    height: 150px;
+    height: 9.375rem;
 }
 
 .form-info-container {
-    height: 48px;
+    height: 3rem;
     display: flex;
     flex-direction: column;
-    gap: 5px;
+    gap: 0.3125rem;
 }
 
 #form .error {
@@ -213,14 +213,14 @@ label {
     font-size: 0.75rem;
     color: #EEEEEE;
     background: #A91079;
-    border: 2px solid #A91079;
-    border-radius: 8px;
+    border: 0.125rem solid #A91079;
+    border-radius: 0.5rem;
     display: flex;
-    gap: 10px;
-    padding: 10px 25px;
+    gap: 0.625rem;
+    padding: 0.625rem 1.5625rem;
 }
 
 #form button:hover {
     background: #8a0a61;
-    border: 2px solid #8a0a61;
+    border: 0.125rem solid #A91079;
 }
