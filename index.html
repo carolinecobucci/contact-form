@@ -1,112 +1,147 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap" rel="stylesheet">
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Contact Form</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
     <div class="container">
-        <div class="container-wrap">
-            <div class="text-container">
-                <h1>Let's discuss<br> on something <span class="change-color">cool</span> together</h1>
-                <div class="text-info">
-                    <div class="text-info-links">
-                        <img src="images/email-icon.svg" alt="email icon">
-                        <p>SaulDesign@gmail.com</p>
-                    </div>
-                    <div class="text-info-links">
-                        <img src="images/phone-icon.svg" alt="email icon">
-                        <p>+123 456 789</p>
-                    </div>
-                    <div class="text-info-links">
-                        <img src="images/address-icon.svg" alt="email icon">
-                        <p>123 Street 456 House</p>
-                    </div>
-                </div>
-                <div class="text-socials">
-                    <a href="#"><img src="images/facebook-icon.svg" alt="facebook icon"></a>
-                    <a href="#"><img src="images/insta-icon.svg" alt="intagram icon"></a>
-                    <a href="#"><img src="images/twitter-icon.svg" alt="twitter icon"></a>
-                </div>
+      <div class="container-wrap">
+        <div class="text-container">
+          <h1>
+            Let's discuss<br />
+            on something <span class="change-color">cool</span> together
+          </h1>
+          <div class="text-info">
+            <div class="text-info-links">
+              <img src="images/email-icon.svg" alt="email icon" />
+              <p>SaulDesign@gmail.com</p>
             </div>
-            <div class="form-container-background">
-                <div class="form-container">
-                    <h2>I'm interested in...</h2>
-                    <form id="form">
-                        <div class="form-checkbox-container">
-                            <div class="form-checkbox">
-                                <input
-                                    type="checkbox"
-                                    id="checkbox-1"
-                                    class="checkbox"
-                                    name="interest"
-                                    value="uiuxdesign"
-                                >
-                                <label for="checkbox-1">UI/UX design</label>
-                                <input 
-                                    type="checkbox"
-                                    id="checkbox-2"
-                                    class="checkbox"
-                                    name="interest"
-                                    value="webdesign"
-                                >
-                                <label for="checkbox-2">Web design</label>
-                                <input 
-                                    type="checkbox"
-                                    id="checkbox-3"
-                                    class="checkbox"
-                                    name="interest"
-                                    value="graphicdesign"
-                                >
-                                <label for="checkbox-3">Graphic design</label>
-                                <input
-                                    type="checkbox"
-                                    id="checkbox-4"
-                                    class="checkbox"
-                                    name="interest"
-                                    value="designsystem"
-                                >
-                                <label for="checkbox-4">Design system</label>
-                                <input
-                                    type="checkbox"
-                                    id="checkbox-5"
-                                    class="checkbox"
-                                    name="interest"
-                                    value="other"
-                                >
-                                <label for="checkbox-5">Other</label>
-                            </div>
-                            <p id="checkbox-error-msg" class="error checkbox-error">Please select an interest.</p>
-                        </div>
-                        <div class="form-info">
-                        <div class="form-info-container">
-                            <input type="text" name="name" id="username" placeholder="Your name">
-                            <p id="checkbox-error-name" class="error name-error">Please enter your name and last name.</p>
-                        </div>
-                        <div class="form-info-container">
-                            <input type="email" name="email" id="email" placeholder="Your email">
-                            <p id="checkbox-error-email" class="error email-error">Please enter a valid email address.</p>
-                        </div>
-                        <div class="form-info-container">
-                            <input type="text" name="message" id="message" placeholder="Your message">
-                            <p id="checkbox-error-message" class="error message-error">Your message needs to be at least 20 characters long.</p>
-                        </div>
-                       </div>
-                       <button type="submit">
-                        <img src="images/submit-icon.svg" alt="submit icon">
-                        <p>Send Message</p>
-                       </button>
-                    </form>
-                </div>
+            <div class="text-info-links">
+              <img src="images/phone-icon.svg" alt="email icon" />
+              <p>+123 456 789</p>
             </div>
+            <div class="text-info-links">
+              <img src="images/address-icon.svg" alt="email icon" />
+              <p>123 Street 456 House</p>
+            </div>
+          </div>
+          <div class="text-socials">
+            <a href="#"
+              ><img src="images/facebook-icon.svg" alt="facebook icon"
+            /></a>
+            <a href="#"
+              ><img src="images/insta-icon.svg" alt="intagram icon"
+            /></a>
+            <a href="#"
+              ><img src="images/twitter-icon.svg" alt="twitter icon"
+            /></a>
+          </div>
         </div>
+        <div class="form-container-background">
+          <div class="form-container">
+            <h2>I'm interested in...</h2>
+            <form id="form">
+              <div class="form-checkbox-container">
+                <div class="form-checkbox">
+                  <input
+                    type="checkbox"
+                    id="checkbox-1"
+                    class="checkbox"
+                    name="interest"
+                    value="uiuxdesign"
+                  />
+                  <label for="checkbox-1">UI/UX design</label>
+                  <input
+                    type="checkbox"
+                    id="checkbox-2"
+                    class="checkbox"
+                    name="interest"
+                    value="webdesign"
+                  />
+                  <label for="checkbox-2">Web design</label>
+                  <input
+                    type="checkbox"
+                    id="checkbox-3"
+                    class="checkbox"
+                    name="interest"
+                    value="graphicdesign"
+                  />
+                  <label for="checkbox-3">Graphic design</label>
+                  <input
+                    type="checkbox"
+                    id="checkbox-4"
+                    class="checkbox"
+                    name="interest"
+                    value="designsystem"
+                  />
+                  <label for="checkbox-4">Design system</label>
+                  <input
+                    type="checkbox"
+                    id="checkbox-5"
+                    class="checkbox"
+                    name="interest"
+                    value="other"
+                  />
+                  <label for="checkbox-5">Other</label>
+                </div>
+                <p id="checkbox-error-msg" class="error checkbox-error">
+                  Please select an interest.
+                </p>
+              </div>
+              <div class="form-info">
+                <div class="form-info-container">
+                  <input
+                    type="text"
+                    name="name"
+                    id="username"
+                    placeholder="Your name"
+                  />
+                  <p id="checkbox-error-name" class="error name-error">
+                    Please enter your name and last name.
+                  </p>
+                </div>
+                <div class="form-info-container">
+                  <input
+                    type="email"
+                    name="email"
+                    id="email"
+                    placeholder="Your email"
+                  />
+                  <p id="checkbox-error-email" class="error email-error">
+                    Please enter a valid email address.
+                  </p>
+                </div>
+                <div class="form-info-container">
+                  <input
+                    type="text"
+                    name="message"
+                    id="message"
+                    placeholder="Your message"
+                  />
+                  <p id="checkbox-error-message" class="error message-error">
+                    Your message needs to be at least 20 characters long.
+                  </p>
+                </div>
+              </div>
+              <button type="submit">
+                <img src="images/submit-icon.svg" alt="submit icon" />
+                <p>Send Message</p>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
     </div>
     <script src="script.js"></script>
-</body>
+  </body>
 </html>

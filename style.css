@@ -1,226 +1,226 @@
 html {
-    height: 100%;
+  height: 100%;
 }
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    font-family: 'Poppins', sans-serif;
-    background-color: #2E0249;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100%;
+  font-family: "Poppins", sans-serif;
+  background-color: #2e0249;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100%;
 }
 
 .container {
-    background-color: #2E0249;
-    border-radius: 0.875rem;
-    margin: 0 auto;
-    width: 800px;
+  background-color: #2e0249;
+  border-radius: 0.875rem;
+  margin: 0 auto;
+  width: 800px;
 }
 
 .container-wrap {
-    padding: 2rem;
-    display: flex;
-    gap: 5rem;
+  padding: 2rem;
+  display: flex;
+  gap: 5rem;
 }
 
 .text-container h1 {
-    color: #EEEEEE;
-    font-weight: 700;
-    font-size: 1.6rem;
-    margin-bottom: 3rem;
+  color: #eeeeee;
+  font-weight: 700;
+  font-size: 1.6rem;
+  margin-bottom: 3rem;
 }
 
 .change-color {
-    color: #A91079;
+  color: #a91079;
 }
 
 .text-info {
-    margin-bottom: 9rem;
+  margin-bottom: 9rem;
 }
 
 .text-info-links {
-    color: #FFFFFF;
-    display: flex;
-    gap: 0.625rem;
-    padding: 1rem 3rem 1rem 1rem;
-    font-size: .8rem;
-    font-weight: 500;
-    border: 0.125rem solid #2E0249;
-    border-radius: 0.75rem;
+  color: #ffffff;
+  display: flex;
+  gap: 0.625rem;
+  padding: 1rem 3rem 1rem 1rem;
+  font-size: 0.8rem;
+  font-weight: 500;
+  border: 0.125rem solid #2e0249;
+  border-radius: 0.75rem;
 }
 
 .text-info-links img {
-    width: 0.9rem;
+  width: 0.9rem;
 }
 
 .text-info-links:hover {
-    background: rgba(87, 10, 87, 0.5);
-    border: 0.125rem solid #A91079;
-    border-radius: 0.75rem;
+  background: rgba(87, 10, 87, 0.5);
+  border: 0.125rem solid #a91079;
+  border-radius: 0.75rem;
 }
 
 .text-socials {
-    display: flex;
-    width: 11.25rem;
-    align-items: center;
-    justify-content: space-around;
-    margin-left: 0.75rem;
+  display: flex;
+  width: 11.25rem;
+  align-items: center;
+  justify-content: space-around;
+  margin-left: 0.75rem;
 }
 
 .text-socials a {
-    width: 40px;
-    height: 40px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .text-socials img {
-    padding: 0.5rem;
+  padding: 0.5rem;
 }
 
 .text-socials a:hover {
-    background-color: #A91079;
-    border-radius: 50%;
+  background-color: #a91079;
+  border-radius: 50%;
 }
 
 .form-container-background {
-    background-color: #EEEEEE;
-    border-radius: 0.875rem;
-    width: 100%;
+  background-color: #eeeeee;
+  border-radius: 0.875rem;
+  width: 100%;
 }
 
 .form-container {
-    padding: 1.6rem;
-    height: 2rem;
+  padding: 1.6rem;
+  height: 2rem;
 }
 
 .form-container h2 {
-    font-family: 'Poppins', sans-serif;
-    color: #2E0249;
-    font-size: 0.75rem;
-    font-weight: 500;
-    margin-bottom: 0.625rem;
+  font-family: "Poppins", sans-serif;
+  color: #2e0249;
+  font-size: 0.75rem;
+  font-weight: 500;
+  margin-bottom: 0.625rem;
 }
 
 .form-checkbox {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 0.625rem;
-    margin-bottom: 0.5rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 0.625rem;
+  margin-bottom: 0.5rem;
 }
 
 .checkbox {
-    display: none;
+  display: none;
 }
 
 label {
-    font-family: 'Poppins', sans-serif;
-    color: #2E02494D;
-    font-size: 0.75rem;
-    padding: 0.625rem 0.8125rem;
-    height: 2.5rem;
-    border: 0.125rem solid #2E02494D;
-    border-radius: 0.5rem;
-    align-items: center;
-    justify-content: center;
-  }
+  font-family: "Poppins", sans-serif;
+  color: #2e02494d;
+  font-size: 0.75rem;
+  padding: 0.625rem 0.8125rem;
+  height: 2.5rem;
+  border: 0.125rem solid #2e02494d;
+  border-radius: 0.5rem;
+  align-items: center;
+  justify-content: center;
+}
 
-  .checkbox:checked + label {
-    color: #EEEEEE;
-    background-color: #A91079;
-    border: 0.125rem solid #A91079;
-  }
+.checkbox:checked + label {
+  color: #eeeeee;
+  background-color: #a91079;
+  border: 0.125rem solid #a91079;
+}
 
-  .checkbox:hover + label {
-    color: #EEEEEE;
-    background-color: #A91079;
-    border: 0.125rem solid #A91079;
-  }
+.checkbox:hover + label {
+  color: #eeeeee;
+  background-color: #a91079;
+  border: 0.125rem solid #a91079;
+}
 
 .form-info {
-    display: flex;
-    flex-direction: column;
-    gap: 0.625rem;
-    margin-bottom: 5.3125rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.625rem;
+  margin-bottom: 5.3125rem;
 }
 
 .form-info input {
-    font-family: 'Poppins', sans-serif;
-    font-size: 0.75rem;
-    color: #2E02494D;
-    border-style: none;
-    border-bottom: 0.125rem solid #2E02494D;
-    background-color: transparent;
-    caret-color: #A91079;
+  font-family: "Poppins", sans-serif;
+  font-size: 0.75rem;
+  color: #2e02494d;
+  border-style: none;
+  border-bottom: 0.125rem solid #2e02494d;
+  background-color: transparent;
+  caret-color: #a91079;
 }
 
 .form-info input:hover {
-    color: #2E0249;
-    border-bottom: 0.125rem solid #A91079;
+  color: #2e0249;
+  border-bottom: 0.125rem solid #a91079;
 }
 
 .form-info input::placeholder {
-    color:#2E02494D;
+  color: #2e02494d;
 }
 
 .form-info input:focus {
-    outline: none;
+  outline: none;
 }
 
 .form-checkbox-container {
-    height: 9.375rem;
+  height: 9.375rem;
 }
 
 .form-info-container {
-    height: 3rem;
-    display: flex;
-    flex-direction: column;
-    gap: 0.3125rem;
+  height: 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3125rem;
 }
 
 #form .error {
-    font-size: 0.7rem;
-    color: #a70d0d;
+  font-size: 0.7rem;
+  color: #a70d0d;
 }
 
 #form .checkbox-error {
-    display: none;
+  display: none;
 }
 
 #form .name-error {
-    display: none;
+  display: none;
 }
 
 #form .email-error {
-    display: none;
+  display: none;
 }
 
 #form .message-error {
-    display: none;
+  display: none;
 }
 
 #form button {
-    font-family: 'Poppins', sans-serif;
-    font-size: 0.75rem;
-    color: #EEEEEE;
-    background: #A91079;
-    border: 0.125rem solid #A91079;
-    border-radius: 0.5rem;
-    display: flex;
-    gap: 0.625rem;
-    padding: 0.625rem 1.5625rem;
+  font-family: "Poppins", sans-serif;
+  font-size: 0.75rem;
+  color: #eeeeee;
+  background: #a91079;
+  border: 0.125rem solid #a91079;
+  border-radius: 0.5rem;
+  display: flex;
+  gap: 0.625rem;
+  padding: 0.625rem 1.5625rem;
 }
 
 #form button:hover {
-    background: #8a0a61;
-    border: 0.125rem solid #A91079;
+  background: #8a0a61;
+  border: 0.125rem solid #a91079;
 }
