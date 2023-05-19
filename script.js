@@ -10,43 +10,50 @@ const checkboxUsernameError = document.getElementById('checkbox-error-name');
 const checkboxEmailError = document.getElementById('checkbox-error-email');
 const checkboxMessageError = document.getElementById('checkbox-error-message');
 
-// const errors = {
-//     checkboxes: false,
-//     username: false,
-//     email: false,
-//     message: false
-// }
+const errors = {
+    'checkbox-error': false,
+    'name-error': false,
+    'email-error': false,
+    'message-error': false
+}
 
 form.addEventListener('submit', (event) => {
-    event.preventDefault()
+    event.preventDefault();
 
     if (!areCheckboxesSelected(checkboxes)) {
-        checkboxError.classList.remove('checkbox-error');
-        return
-    }
+        errors['checkbox-error'] = true;
+        
+    } else errors['checkbox-error'] = false;
 
-    checkboxError.classList.add('checkbox-error');
 
     if (username.value === '' || !isUsernameValid(username.value)) {
-        checkboxUsernameError.classList.remove('name-error');
-        return
-    } 
-
-    checkboxUsernameError.classList.add('name-error');
+        errors['name-error'] = true;
+    } else errors['name-error'] = false;
 
     if (email.value === '' || !isEmailValid(email.value)) {
-        checkboxEmailError.classList.remove('email-error');
-        return
-    }
-
-    checkboxEmailError.classList.add('email-error');
+        errors['email-error'] = true;
+    } else errors['email-error'] = false;
 
     if (message.value === '' || !message.length > 20) {
-        checkboxMessageError.classList.remove('message-error');
+        errors['message-error'] = true;
+    } else errors['message-error'] = false;
+
+    if (errors['checkbox-error']) checkboxError.classList.remove('checkbox-error');
+    if (errors['name-error']) checkboxUsernameError.classList.remove('name-error');
+    if (errors['email-error']) checkboxEmailError.classList.remove('email-error');
+    if (errors['message-error']) checkboxMessageError.classList.remove('message-error');
+
+    if (!errors['checkbox-error']) checkboxError.classList.add('checkbox-error');
+    if (!errors['name-error']) checkboxUsernameError.classList.add('name-error');
+    if (!errors['email-error']) checkboxEmailError.classList.add('email-error');
+    if (!errors['message-error']) checkboxMessageError.classList.add('message-error');
+
+    const booleanArray = Object.values(errors);
+    const errorArray = booleanArray.filter(booleanValue => booleanValue)
+
+    if (errorArray.length > 0 ) {
         return
     }
-
-    checkboxMessageError.classList.add('message-error');
 
     form.onsubmit();
 })
