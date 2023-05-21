@@ -4,7 +4,6 @@ const username = document.getElementById("username");
 const email = document.getElementById("email");
 const message = document.getElementById("message");
 const submitButton = document.getElementById("submitButton");
-
 const checkboxError = document.getElementById("checkbox-error-msg");
 const usernameError = document.getElementById("error-name");
 const emailError = document.getElementById("error-email");
@@ -29,9 +28,21 @@ function areCheckboxesSelected(checkboxes) {
   return checkedCheckboxes.length > 0;
 }
 
+function getCheckboxesValues() {
+  const checkboxesValues = [];
+
+  for (let i = 0; i < checkboxes.length; i++) {
+    if (checkboxes[i].checked) {
+      checkboxesValues.push(checkboxes[i].value);
+    }
+  }
+
+  return checkboxesValues;
+}
+
 function isUsernameValid(username) {
-  const words = username.split(" ");
-  return words.length >= 2;
+  const usernameRegex = new RegExp(/^[^\s]+\s+[^\s]+$/);
+  return usernameRegex.test(username);
 }
 
 function isEmailValid(email) {
@@ -39,24 +50,14 @@ function isEmailValid(email) {
   return emailRegex.test(email);
 }
 
-form.addEventListener("input", function () {
-  let allFieldsFilled = true;
+function checkError() {
+  const booleanArray = Object.values(errors);
+  const errorArray = booleanArray.filter((booleanValue) => booleanValue);
 
-  for (let i = 0; i < form.elements.length; i++) {
-    const field = form.elements[i];
+  return errorArray.length > 0;
+}
 
-    if (field.type !== "submit" && (field.value === "" || !areCheckboxesSelected(checkboxes))) {
-      allFieldsFilled = false;
-      break;
-    }
-  }
-
-  submitButton.disabled = !allFieldsFilled;
-});
-
-form.addEventListener("submit", (event) => {
-  event.preventDefault();
-
+function setError() {
   if (!areCheckboxesSelected(checkboxes)) {
     errors["checkbox-error"] = true;
   } else errors["checkbox-error"] = false;
@@ -82,13 +83,42 @@ form.addEventListener("submit", (event) => {
   if (!errors["name-error"]) usernameError.classList.add("name-error");
   if (!errors["email-error"]) emailError.classList.add("email-error");
   if (!errors["message-error"]) messageError.classList.add("message-error");
+}
 
-  const booleanArray = Object.values(errors);
-  const errorArray = booleanArray.filter((booleanValue) => booleanValue);
+form.addEventListener("input", function () {
+  let allFieldsFilled = true;
 
-  if (errorArray.length > 0) {
-    return;
+  for (let i = 0; i < form.elements.length; i++) {
+    const field = form.elements[i];
+
+    if (checkError()) setError();
+
+    if (field.type !== "submit" && (field.value === "" || !areCheckboxesSelected(checkboxes))) {
+      allFieldsFilled = false;
+      break;
+    }
   }
+
+  submitButton.disabled = !allFieldsFilled;
+});
+
+form.addEventListener("submit", (event) => {
+  event.preventDefault();
+
+  setError();
+
+  if (checkError()) return;
+
+  const formData = {
+    checkboxes: getCheckboxesValues(),
+    username: username.value,
+    email: email.value,
+    message: message.value,
+  };
+
+  const jsonData = JSON.stringify(formData);
+
+  localStorage.setItem("formData", jsonData);
 
   form.onsubmit();
 });

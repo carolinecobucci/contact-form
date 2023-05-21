@@ -220,7 +220,13 @@ label {
   padding: 0.625rem 1.5625rem;
 }
 
-#form button:hover {
+#form button:disabled {
+  border: 0.125rem solid #2e02494d;
+  background: #2e02494d;
+  background-clip: padding-box;
+}
+
+#form button:hover:enabled {
   background: #8a0a61;
-  border: 0.125rem solid #a91079;
+  border: 0.125rem solid #8a0a61;
 }

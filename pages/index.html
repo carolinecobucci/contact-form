@@ -11,7 +11,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Contact Form</title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="../style/style.css" />
   </head>
   <body>
     <div class="container">
@@ -44,7 +44,7 @@
         <div class="form-container-background">
           <div class="form-container">
             <h2>I'm interested in...</h2>
-            <form id="form" novalidate>
+            <form id="form" autocomplete="off" novalidate>
               <div class="form-checkbox-container">
                 <div class="form-checkbox">
                   <input
@@ -52,7 +52,7 @@
                     id="checkbox-1"
                     class="checkbox"
                     name="interest"
-                    value="uiuxdesign"
+                    value="UI/UX design"
                   />
                   <label for="checkbox-1">UI/UX design</label>
                   <input
@@ -60,7 +60,7 @@
                     id="checkbox-2"
                     class="checkbox"
                     name="interest"
-                    value="webdesign"
+                    value="Web design"
                   />
                   <label for="checkbox-2">Web design</label>
                   <input
@@ -68,7 +68,7 @@
                     id="checkbox-3"
                     class="checkbox"
                     name="interest"
-                    value="graphicdesign"
+                    value="Graphic design"
                   />
                   <label for="checkbox-3">Graphic design</label>
                   <input
@@ -76,7 +76,7 @@
                     id="checkbox-4"
                     class="checkbox"
                     name="interest"
-                    value="designsystem"
+                    value="Design system"
                   />
                   <label for="checkbox-4">Design system</label>
                   <input
@@ -84,7 +84,7 @@
                     id="checkbox-5"
                     class="checkbox"
                     name="interest"
-                    value="other"
+                    value="Other"
                   />
                   <label for="checkbox-5">Other</label>
                 </div>
@@ -112,7 +112,12 @@
                   </p>
                 </div>
               </div>
-              <button id="submitButton" type="submit" disabled>
+              <button
+                onclick="window.location.href = 'submittedForm.html'"
+                id="submitButton"
+                type="submit"
+                disabled
+              >
                 <img src="images/submit-icon.svg" alt="submit icon" />
                 <p>Send Message</p>
               </button>
@@ -121,6 +126,6 @@
         </div>
       </div>
     </div>
-    <script src="script.js"></script>
+    <script src="../src/script.js"></script>
   </body>
 </html>
