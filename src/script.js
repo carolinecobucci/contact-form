@@ -41,7 +41,7 @@ function getCheckboxesValues() {
 }
 
 function isUsernameValid(username) {
-  const usernameRegex = new RegExp(/^[^\s]+\s+[^\s]+$/);
+  const usernameRegex = new RegExp(/\b\w+\b(?:\s+\b\w+\b)+/);
   return usernameRegex.test(username);
 }
 
