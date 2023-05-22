@@ -120,5 +120,5 @@ form.addEventListener("submit", (event) => {
 
   localStorage.setItem("formData", jsonData);
 
-  form.onsubmit();
+  window.location.href = "submittedForm.html";
 });
