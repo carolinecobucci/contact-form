@@ -1,3 +1,4 @@
+// Storing elements into constants
 const form = document.getElementById("form");
 const checkboxes = document.querySelectorAll("input[type=checkbox]");
 const username = document.getElementById("username");
@@ -9,6 +10,7 @@ const usernameError = document.getElementById("error-name");
 const emailError = document.getElementById("error-email");
 const messageError = document.getElementById("error-message");
 
+// Creating an object to check for errors
 const errors = {
   "checkbox-error": false,
   "name-error": false,
@@ -16,6 +18,7 @@ const errors = {
   "message-error": false,
 };
 
+// Function to verify if the checkboxes are selected
 function areCheckboxesSelected(checkboxes) {
   const checkedCheckboxes = [];
 
@@ -28,6 +31,7 @@ function areCheckboxesSelected(checkboxes) {
   return checkedCheckboxes.length > 0;
 }
 
+// Function to get the checkboxes values
 function getCheckboxesValues() {
   const checkboxesValues = [];
 
@@ -40,16 +44,19 @@ function getCheckboxesValues() {
   return checkboxesValues;
 }
 
+// Function to check if the name is valid
 function isUsernameValid(username) {
   const usernameRegex = new RegExp(/\b\w+\b(?:\s+\b\w+\b)+/);
   return usernameRegex.test(username);
 }
 
+// Function to check if the email is valid
 function isEmailValid(email) {
   const emailRegex = new RegExp(/^[a-zA-Z0-9._-]+@[a-zA-Z0-9._-]+\.[a-zA-Z]{2,}$/);
   return emailRegex.test(email);
 }
 
+// Function to check for errors
 function checkError() {
   const booleanArray = Object.values(errors);
   const errorArray = booleanArray.filter((booleanValue) => booleanValue);
@@ -57,6 +64,7 @@ function checkError() {
   return errorArray.length > 0;
 }
 
+// Function to set errors
 function setError() {
   if (!areCheckboxesSelected(checkboxes)) {
     errors["checkbox-error"] = true;
@@ -122,3 +130,7 @@ form.addEventListener("submit", (event) => {
 
   window.location.href = "submittedForm.html";
 });
+
+// Function to clear form
+
+// Save more than one form at localStorage
